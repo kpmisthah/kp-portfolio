@@ -1,0 +1,60 @@
+.section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statNumber {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: #8892b0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

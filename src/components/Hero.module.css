@@ -32,12 +32,14 @@
     font-weight: 800;
     line-height: 1.1;
     background: linear-gradient(to right, #fff, #aaa);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .highlight {
     background: linear-gradient(to right, var(--primary), var(--secondary));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
