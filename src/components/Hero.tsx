@@ -5,7 +5,31 @@ import { ArrowRight, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 
+import { resumeBase64 } from '@/data/resumeData';
+
 export default function Hero() {
+    const handleDownload = () => {
+        // Create a Blob from the base64 string
+        const byteCharacters = atob(resumeBase64);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        const blob = new Blob([byteArray], { type: 'application/pdf' });
+
+        // Create download link
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'KP_Misthah_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+
+        // Cleanup
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+    };
     return (
         <section className={styles.section} id="hero">
             <div className={styles.container}>
@@ -47,14 +71,9 @@ export default function Hero() {
                     <Link href="#projects" className={styles.primaryBtn}>
                         View Work <ArrowRight size={20} />
                     </Link>
-                    <a
-                        href="https://raw.githubusercontent.com/kpmisthah/kp-portfolio/main/public/resume_final.pdf"
-                        className={styles.secondaryBtn}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <button onClick={handleDownload} className={styles.secondaryBtn}>
                         Download Resume <Download size={20} />
-                    </a>
+                    </button>
                 </motion.div>
             </div>
         </section>
