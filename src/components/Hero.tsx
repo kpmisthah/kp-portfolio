@@ -8,26 +8,6 @@ import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 
 export default function Hero() {
-    const handleDownload = async () => {
-        try {
-            const response = await fetch('/my_resume.pdf');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'KP_Misthah_Resume.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(url);
-        } catch (error) {
-            console.error('Download failed:', error);
-            alert('Download failed. Please try again.');
-        }
-    };
     return (
         <section className={styles.section} id="hero">
             <div className={styles.container}>
@@ -69,9 +49,12 @@ export default function Hero() {
                     <Link href="#projects" className={styles.primaryBtn}>
                         View Work <ArrowRight size={20} />
                     </Link>
-                    <button onClick={handleDownload} className={styles.secondaryBtn}>
+                    <a
+                        href="/api/download-resume"
+                        className={styles.secondaryBtn}
+                    >
                         Download Resume <Download size={20} />
-                    </button>
+                    </a>
                 </motion.div>
             </div>
         </section>
