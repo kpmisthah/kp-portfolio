@@ -47,9 +47,9 @@ export default function Hero() {
                     <Link href="#projects" className={styles.primaryBtn}>
                         View Work <ArrowRight size={20} />
                     </Link>
-                    <Link href="/cv.pdf" className={styles.secondaryBtn} target="_blank">
+                    <a href="/cv.pdf" className={styles.secondaryBtn} target="_blank" rel="noopener noreferrer">
                         Resume <Download size={20} />
-                    </Link>
+                    </a>
                 </motion.div>
             </div>
         </section>
