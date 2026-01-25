@@ -5,31 +5,8 @@ import { ArrowRight, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 
-import { resumeBase64 } from '@/data/resumeData';
 
 export default function Hero() {
-    const handleDownload = () => {
-        // Create a Blob from the base64 string
-        const byteCharacters = atob(resumeBase64);
-        const byteNumbers = new Array(byteCharacters.length);
-        for (let i = 0; i < byteCharacters.length; i++) {
-            byteNumbers[i] = byteCharacters.charCodeAt(i);
-        }
-        const byteArray = new Uint8Array(byteNumbers);
-        const blob = new Blob([byteArray], { type: 'application/pdf' });
-
-        // Create download link
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'KP_Misthah_Resume.pdf';
-        document.body.appendChild(link);
-        link.click();
-
-        // Cleanup
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-    };
     return (
         <section className={styles.section} id="hero">
             <div className={styles.container}>
@@ -71,9 +48,21 @@ export default function Hero() {
                     <Link href="#projects" className={styles.primaryBtn}>
                         View Work <ArrowRight size={20} />
                     </Link>
-                    <button onClick={handleDownload} className={styles.secondaryBtn}>
+                    <a
+                        href="/resume.pdf"
+                        className={styles.secondaryBtn}
+                        download="KP_Misthah_Resume.pdf"
+                    >
                         Download Resume <Download size={20} />
-                    </button>
+                    </a>
+                    {/* Debug link - to be removed later */}
+                    <a
+                        href="/test.txt"
+                        style={{ fontSize: '0.8rem', color: '#666', textDecoration: 'underline', marginTop: '10px' }}
+                        download
+                    >
+                        Test Download
+                    </a>
                 </motion.div>
             </div>
         </section>
