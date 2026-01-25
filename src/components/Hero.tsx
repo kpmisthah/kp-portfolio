@@ -4,17 +4,8 @@ import Link from 'next/link';
 import { ArrowRight, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
-import { resumeBase64 } from '@/data/resumeData';
 
 export default function Hero() {
-    const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = `data:application/pdf;base64,${resumeBase64}`;
-        link.download = 'KP_Misthah_Resume.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
     return (
         <section className={styles.section} id="hero">
             <div className={styles.container}>
@@ -56,9 +47,14 @@ export default function Hero() {
                     <Link href="#projects" className={styles.primaryBtn}>
                         View Work <ArrowRight size={20} />
                     </Link>
-                    <button onClick={handleDownload} className={styles.secondaryBtn}>
+                    <a
+                        href="https://raw.githubusercontent.com/kpmisthah/kp-portfolio/main/public/resume_final.pdf"
+                        className={styles.secondaryBtn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Download Resume <Download size={20} />
-                    </button>
+                    </a>
                 </motion.div>
             </div>
         </section>
