@@ -5,7 +5,7 @@ import path from 'path';
 export async function GET() {
     try {
         // Try to serve the original file
-        const filePath = path.join(process.cwd(), 'public', 'resume_v2.pdf');
+        const filePath = path.join(process.cwd(), 'public', 'resume.pdf');
 
         if (!fs.existsSync(filePath)) {
             return new NextResponse('File not found', { status: 404 });
