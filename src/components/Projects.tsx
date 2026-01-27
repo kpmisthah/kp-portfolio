@@ -25,7 +25,7 @@ const projects: Project[] = [
         frontendRepo: 'https://github.com/kpmisthah/wayfare-frontend',
         backendRepo: 'https://github.com/kpmisthah/wayfare-backend',
         demo: 'https://wayfare.misthah.site/',
-        image: '/project2.jpg'
+        image: '/project-wayfare.png'
     },
     {
         title: 'Real-time Chat Application',
@@ -33,15 +33,15 @@ const projects: Project[] = [
         tags: ['Node.js', 'Socket.io', 'React'],
         github: 'https://github.com/kpmisthah/realtime-polling-chat-app',
         demo: '#',
-        image: '/project3.jpg'
+        image: '/project-chat.png'
     },
     {
         title: 'Stackseed',
-        description: 'SeedStack is a CLI tool that helps developers quickly bootstrap a clean and scalable Node.js backend. It generates a ready-to-use project structure with TypeScript, authentication, security setup, and clean architecture using the repository pattern.so developers can focus on building features instead of repeating boilerplate setup.',
+        description: 'SeedStack is a CLI tool that helps developers quickly bootstrap a clean and scalable Node.js backend. It generates a ready-to-use project structure with TypeScript, authentication, security setup, and clean architecture using the repository pattern so developers can focus on building features instead of repeating boilerplate setup.',
         tags: ['Node.js', 'TypeScript', 'MongoDB'],
         github: 'https://github.com/kpmisthah/stackseed',
         demo: "",
-        image: '/project4.jpg'
+        image: '/project-stackseed.png'
     }
 ];
 
