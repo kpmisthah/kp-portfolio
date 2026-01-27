@@ -8,17 +8,17 @@ const skillCategories = [
     {
         title: 'Frontend',
         icon: <Layout size={24} />,
-        skills: ['React.js', 'Next.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Framer Motion', 'Redux', 'TypeScript']
+        skills: ['React.js', 'Next.js', 'HTML5', 'CSS', 'Tailwind CSS', 'Framer Motion', 'Redux']
     },
     {
         title: 'Backend',
         icon: <Server size={24} />,
-        skills: ['Node.js', 'NestJS', 'Express.js', 'REST APIs', 'GraphQL', 'Microservices']
+        skills: ['JavaScript', 'TypeScript', 'Node.js', 'NestJS', 'Express.js', 'REST APIs']
     },
     {
         title: 'Database',
         icon: <Database size={24} />,
-        skills: ['MongoDB', 'PostgreSQL', 'Redis', 'Mongoose', 'Prisma']
+        skills: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis']
     },
     {
         title: 'DevOps & Tools',

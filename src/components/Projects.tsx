@@ -5,37 +5,42 @@ import { ExternalLink, Github, Folder } from 'lucide-react';
 import Image from 'next/image';
 import styles from './Projects.module.css';
 
-const projects = [
+interface Project {
+    title: string;
+    description: string;
+    tags: string[];
+    github?: string;
+    frontendRepo?: string;
+    backendRepo?: string;
+    demo: string;
+    image: string;
+}
+
+const projects: Project[] = [
     {
-        title: 'E-commerce Platform',
-        description: 'A full-featured online store with cart functionality, user authentication, and payment gateway integration using Stripe.',
-        tags: ['Next.js', 'Redux Toolkit', 'Stripe', 'MongoDB'],
-        github: '#',
-        demo: '#',
-        image: '/project1.jpg' // Would need real images
-    },
-    {
-        title: 'Task Management System',
-        description: 'A collaborative project management tool with drag-and-drop Kanban boards, team workspaces, and real-time updates.',
-        tags: ['React', 'NestJS', 'PostgreSQL', 'Socket.io'],
-        github: '#',
-        demo: '#',
+        title: 'Wayfare',
+        description: 'Wayfare is a travel planning SAAS platform where users can compare travel agencies, book trips, get AI-generated itineraries, and connect with travelers visiting the same destination through chat and video calls.',
+        tags: ['Next.js', 'NestJS', 'Stripe', 'PostgreSQL', 'MongoDB', 'Redis', 'WebRtc', "socket.io", "Docker", "CI/CD", "AWS", "Vercel"],
+        // github: '#', // Replaced by specific repos below
+        frontendRepo: 'https://github.com/kpmisthah/wayfare-frontend',
+        backendRepo: 'https://github.com/kpmisthah/wayfare-backend',
+        demo: 'https://wayfare.misthah.site/',
         image: '/project2.jpg'
     },
     {
         title: 'Real-time Chat Application',
-        description: 'Scalable chat application supporting private messaging, group chats, and media sharing with end-to-end encryption.',
-        tags: ['Node.js', 'Socket.io', 'Redis', 'React'],
-        github: '#',
+        description: 'Real-time polling and chat application. Users can vote live and see instant poll updates, chat in real time with usernames, and view typing indicators. Designed to demonstrate WebSocket-based real-time communication.',
+        tags: ['Node.js', 'Socket.io', 'React'],
+        github: 'https://github.com/kpmisthah/realtime-polling-chat-app',
         demo: '#',
         image: '/project3.jpg'
     },
     {
-        title: 'SaaS Dashboard',
-        description: 'Comprehensive analytics dashboard for SaaS businesses featuring data visualization charts and reporting tools.',
-        tags: ['Full Stack', 'D3.js', 'Express', 'Mongoose'],
-        github: '#',
-        demo: '#',
+        title: 'Stackseed',
+        description: 'SeedStack is a CLI tool that helps developers quickly bootstrap a clean and scalable Node.js backend. It generates a ready-to-use project structure with TypeScript, authentication, security setup, and clean architecture using the repository pattern.so developers can focus on building features instead of repeating boilerplate setup.',
+        tags: ['Node.js', 'TypeScript', 'MongoDB'],
+        github: 'https://github.com/kpmisthah/stackseed',
+        demo: "",
         image: '/project4.jpg'
     }
 ];
@@ -80,12 +85,30 @@ export default function Projects() {
                                 </div>
 
                                 <div className={styles.links}>
-                                    <a href={project.github} className={styles.link} target="_blank" rel="noopener noreferrer">
-                                        <Github className={styles.icon} /> Code
-                                    </a>
-                                    <a href={project.demo} className={styles.link} target="_blank" rel="noopener noreferrer">
-                                        <ExternalLink className={styles.icon} /> Live Demo
-                                    </a>
+                                    {/* Handle single GitHub link */}
+                                    {project.github && (
+                                        <a href={project.github} className={styles.link} target="_blank" rel="noopener noreferrer">
+                                            <Github className={styles.icon} /> Code
+                                        </a>
+                                    )}
+
+                                    {/* Handle separate Frontend/Backend links */}
+                                    {project.frontendRepo && (
+                                        <a href={project.frontendRepo} className={styles.link} target="_blank" rel="noopener noreferrer">
+                                            <Github className={styles.icon} /> Frontend
+                                        </a>
+                                    )}
+                                    {project.backendRepo && (
+                                        <a href={project.backendRepo} className={styles.link} target="_blank" rel="noopener noreferrer">
+                                            <Github className={styles.icon} /> Backend
+                                        </a>
+                                    )}
+
+                                    {project?.demo && (
+                                        <a href={project.demo} className={styles.link} target="_blank" rel="noopener noreferrer">
+                                            <ExternalLink className={styles.icon} /> Live Demo
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>

@@ -17,15 +17,15 @@ export default function About() {
 
                 <div className={styles.content}>
                     <p>
-                        I’m a <strong>MERN/Next/Nest Stack Developer</strong> with a strong interest in building real-world, scalable web applications.
+                        I’m a <strong>Full Stack Developer</strong> with a strong interest in building real world, scalable web applications.
                         Currently, I focus on full-stack development using <strong>MongoDB, Express.js, React, Next.js, Node.js, NestJS, Docker, and CI/CD pipelines</strong>.
                     </p>
                     <p>
-                        I enjoy turning complex problems into simple, user-friendly solutions. I have hands-on experience building complete applications including SAAS applications.
+                        I enjoy turning complex problems into simple, user friendly solutions. I have hands on experience building complete applications including SAAS applications.
                         I strongly believe in learning by building, which is why I work continuously on projects that reflect real industry use cases rather than only tutorials.
                     </p>
                     <p>
-                        I pay close attention to logic, clean code, and correct implementation, and I enjoy understanding <em>why</em> something works — not just <em>how</em>.
+                        I pay close attention to logic, clean code, and correct implementation, and I enjoy understanding <em>why</em> something works, not just <em>how</em>.
                     </p>
                 </div>
 
