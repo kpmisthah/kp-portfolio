@@ -68,10 +68,19 @@ export default function Projects() {
                             transition={{ delay: index * 0.1 }}
                         >
                             <div className={styles.imageContainer}>
-                                {/* Fallback to simple gradient if no image */}
-                                <div style={{ width: '100%', height: '100%', background: 'linear-gradient(45deg, #1e202e, #2a2d40)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <Folder size={48} color="#704df4" />
-                                </div>
+                                {project.image ? (
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        style={{ objectFit: 'cover' }}
+                                    />
+                                ) : (
+                                    <div style={{ width: '100%', height: '100%', background: 'linear-gradient(45deg, #1e202e, #2a2d40)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <Folder size={48} color="#704df4" />
+                                    </div>
+                                )}
                             </div>
 
                             <div className={styles.content}>
