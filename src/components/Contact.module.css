@@ -107,3 +107,30 @@
     color: var(--primary);
     transform: translateY(-3px);
 }
+
+.successMessage {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid var(--primary);
+    width: 100%;
+}
+
+.successMessage h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.successMessage p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
