@@ -166,7 +166,7 @@ const StarBackground = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                zIndex: -1, // Behind everything
+                zIndex: 1, // Changed from -1 to 1 to ensure visibility over body background
                 pointerEvents: "none",
                 background: "transparent", // Let the CSS gradient show through
             }}

@@ -19,7 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <StarBackground />
-        {children}
+        <div style={{ position: 'relative', zIndex: 10 }}>
+          {children}
+        </div>
       </body>
     </html>
   );
