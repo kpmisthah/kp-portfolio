@@ -10,7 +10,7 @@ export default function Contact() {
         name: '',
         email: '',
         message: ''
-    });
+    })
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
