@@ -32,7 +32,7 @@ export async function POST(request: Request) {
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER, // Send to yourself
+            to: process.env.EMAIL_USER, 
             replyTo: email,
             subject: `New Portfolio Contact from ${name}`,
             text: `
