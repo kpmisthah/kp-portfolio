@@ -23,8 +23,6 @@ export async function POST(request: Request) {
 
         const { name, email, message } = result.data;
 
-        // Create a transporter using environment variables
-        // This example uses Gmail, but works with any SMTP service
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
