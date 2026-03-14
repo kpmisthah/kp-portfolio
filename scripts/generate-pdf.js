@@ -46,4 +46,4 @@ async function createPdf() {
     }
 }
 
-createPdf()
+createPdf();
