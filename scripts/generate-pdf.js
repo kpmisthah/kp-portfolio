@@ -7,7 +7,6 @@ async function createPdf() {
     try {
         const doc = await PDFDocument.create();
 
-        // Read images
         const img0Path = path.join(__dirname, '../public/resume_pages/img0.png');
         const img1Path = path.join(__dirname, '../public/resume_pages/img1.png');
 
