@@ -22,7 +22,6 @@ async function createPdf() {
         const img0 = await doc.embedPng(img0Bytes);
         const img1 = await doc.embedPng(img1Bytes);
 
-        // Use original dimensions (highest quality)
         const images = [img1, img0];
 
         for (const image of images) {
