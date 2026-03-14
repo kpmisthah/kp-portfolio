@@ -11,7 +11,6 @@ async function createPdf() {
         const img0Path = path.join(__dirname, '../public/resume_pages/img0.png');
         const img1Path = path.join(__dirname, '../public/resume_pages/img1.png');
 
-        // Check if files exist
         if (!fs.existsSync(img0Path) || !fs.existsSync(img1Path)) {
             throw new Error('Images not found in public/resume_pages/');
         }
