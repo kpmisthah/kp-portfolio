@@ -83,7 +83,6 @@ const StarBackground = () => {
 
             // Simple way to keep state without re-rendering component
             // Actually mapping is not persisting changes to the state variable for next frame in this setup
-            // We should mutate the array in place for performance in animation loop usually, but here 'stars' is state.
 
             animationFrameId = requestAnimationFrame(animate);
         };
