@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { motion } from 'framer-motion';
 import { Code2, Database, Layout, Server, Settings, Terminal } from 'lucide-react';
