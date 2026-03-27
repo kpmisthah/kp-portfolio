@@ -86,7 +86,7 @@ const StarBackground = () => {
             animationFrameId = requestAnimationFrame(animate);
         };
 
-        // Ref-based animation implementation to avoid React state updates on every frame
+        
         const starsRef = { current: [] as Star[] };
 
         // Re-init with Ref
