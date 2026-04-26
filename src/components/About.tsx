@@ -17,7 +17,7 @@ export default function About() {
 
                 <div className={styles.content}>
                     <p>
-                        I’m a <strong>Full Stack Developer</strong> with a strong interest in building real world, scalable web Applicati
+                        I’m a <strong>Full Stack Developer</strong> with a strong interest in building real world, scalable web Applications.
                         Currently, I focus on full-stack development using <strong>MongoDB, Express.js, React, Next.js, Node.js, NestJS, Docker, and CI/CD pipelines</strong>.
                     </p>
                     <p>
