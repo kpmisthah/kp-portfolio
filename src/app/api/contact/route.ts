@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer'
 import { z } from 'zod';
 
 const contactSchema = z.object({
