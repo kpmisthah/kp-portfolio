@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { z } from 'zod';
+import { z } from 'zod'
 
 const contactSchema = z.object({
     name: z.string().min(2, 'Name is required'),
